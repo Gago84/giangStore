@@ -58,3 +58,26 @@ main {
   content: '👉 ';
   color: #ff6600;
 }
+
+/* Add style for button in intro page */
+.intro-page button {
+  background-color: #ff6600; /* orange */
+  color: #fff; /* white text */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.15s;
+}
+
+.intro-page button:hover {
+  background-color: #e65c00; /* darker orange */
+  transform: scale(1.05);
+}
+
+.intro-page button:active {
+  background-color: #cc5200;
+  transform: scale(0.98);
+}
