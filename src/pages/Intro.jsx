@@ -1,11 +1,11 @@
 function Intro() {
   return (
     <section className="intro-page">
-      <h1>🎒 MỞ BÁN ĐỒ DÙNG HỌC SINH – GIAO NHANH TẠI CẦU GIẤY 📚</h1>
-      <p><strong>Phụ huynh không cần ra nhà sách – Đặt online, em giao tận nơi!</strong></p>
+      <h1>🎒 MỞ BÁN ĐDHS – VPP – GIAO NHANH TẠI CẦU GIẤY 📚</h1>
+      <p><strong>Phụ huynh không cần ra nhà sách – Đặt online, giám đốc giao tận nơi!</strong></p>
 
       <p>Xin chào các bố mẹ!<br />
-      Mình là Giang đang sống tại <strong>Cầu Giấy – Hà Nội</strong>, hiện đang mở một gian hàng nhỏ chuyên bán <strong>đồ dùng học sinh và văn phòng phẩm</strong>, đảm bảo:</p>
+      Mình là Giang-Hiên đang sống tại <strong>Cầu Giấy – Hà Nội</strong>, hiện đang mở một gian hàng nhỏ chuyên bán <strong>đồ dùng học sinh và văn phòng phẩm</strong>, đảm bảo:</p>
 
       <ul>
         <li>✅ Sản phẩm chính hãng từ Thiên Long, Hồng Hà, Hải Tiến, Deli...</li>
