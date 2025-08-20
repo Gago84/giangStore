@@ -18,29 +18,23 @@ header h1 {
 header div {
   display: flex;
   align-items: center;
+  flex-flow: row wrap;  
   justify-content: space-between;
-  flex-flow: row wrap;
-  
 }
 /* Navigation links as buttons */
 header div nav{
   margin-top: 1rem;
-}
-
-/* Navigation links as buttons */
-/* this layout for first nav for two links */
-header div nav:nth-of-type(1) {
   display: flex;
-  justify-content: center;
-  gap: 0.5rem; 
-  flex: 2 100px;
-  align-self: flex-end;
+}
+/* Navigation links as buttons */
+header div nav:nth-of-type(1) {
+  flex: 1;
+  justify-content: flex-end;
 }
 /* Below is layout for userArea */
 header div nav:nth-of-type(2) {
-  display: flex;
-  justify-content: center;
-  flex: 1 100px;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 header div nav a {
