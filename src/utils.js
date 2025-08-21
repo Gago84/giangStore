@@ -22,12 +22,10 @@ export function convertToE164(phone) {
   if (digits.startsWith("0")) {
     digits = "+84" + digits.substring(1);
   }
-
   // If already starts with 84 and missing '+', add it
   else if (digits.startsWith("84")) {
     digits = "+" + digits;
   }
-
   // Otherwise assume it’s already in correct format
   else if (!digits.startsWith("+")) {
     digits = "+" + digits;
@@ -38,13 +36,12 @@ export function convertToE164(phone) {
 
 /**
  * Resets form state for React components.
- * You should pass in React state setters instead of DOM element IDs.
+ * Uses global window.recaptchaVerifier instead of useRef.
  * 
  * @param {Function} setFormData - React state setter for form data
  * @param {Function} setOtpVisible - React state setter for showing OTP section
- * @param {Object} recaptchaVerifierRef - ref object holding recaptchaVerifier
  */
-export function clearForm(setFormData, setOtpVisible, recaptchaVerifierRef) {
+export function clearForm(setFormData, setOtpVisible) {
   setFormData({
     name: "",
     phone: "",
@@ -52,8 +49,8 @@ export function clearForm(setFormData, setOtpVisible, recaptchaVerifierRef) {
   });
   setOtpVisible(false);
 
-  if (recaptchaVerifierRef?.current) {
-    recaptchaVerifierRef.current.clear();
-    recaptchaVerifierRef.current = null;
+  if (window.recaptchaVerifier) {
+    window.recaptchaVerifier.clear();
+    window.recaptchaVerifier = null;
   }
 }

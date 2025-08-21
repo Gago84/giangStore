@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../firebase/config";
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
-import { clearForm } from "../utils";
+import { clearForm, convertToE164, isValidVietnamesePhone } from "../utils";
 import {
   doc,
   setDoc,
@@ -54,10 +54,14 @@ export default function SignUp() {
     setLoading(true);
 
     try {
-      const phoneNumber = phone.startsWith("+")
-        ? phone
-        : "+84" + phone.slice(1);
 
+      if (!isValidVietnamesePhone(phone)) {
+        alert("⚠️ Vui lòng nhập số điện thoại hợp lệ (VD: 09xxxxxxxx)");
+        setLoading(false);
+        return;
+      }
+
+      const phoneNumber = convertToE164(phone);
       console.log("📞 Số điện thoại chuẩn hóa:", phoneNumber);
 
       // Kiểm tra số đã tồn tại?
