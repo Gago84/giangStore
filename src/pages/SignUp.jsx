@@ -1,17 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../firebase/config";
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { RecaptchaVerifier, signInWithPhoneNumber, updateProfile } from "firebase/auth";
 import { clearForm, convertToE164, isValidVietnamesePhone } from "../utils";
-import {
-  doc,
-  setDoc,
-  serverTimestamp,
-  collection,
-  query,
-  where,
-  getDocs,
-} from "firebase/firestore";
+import {  doc,  setDoc,  serverTimestamp,  collection,  query,  where,  getDocs,} from "firebase/firestore";
 import "../styles/AuthForm.css";
 
 export default function SignUp() {
@@ -106,6 +98,12 @@ export default function SignUp() {
       const user = result.user;
       console.log("✅ OTP verified. User:", user);
 
+      // 👉 Cập nhật Auth profile
+      await updateProfile(user, {
+        displayName: name,
+      });
+
+      // 👉 Lưu Firestore
       await setDoc(doc(db, "users", user.uid), {
         uid: user.uid,
         name: name,
@@ -113,7 +111,7 @@ export default function SignUp() {
         createdAt: serverTimestamp(),
       });
 
-      alert("✅ Phone verified & profile saved! Welcome " + name);
+      alert("✅ Số điện thoại được xác thực, hồ sơ được lưu, chào mừng bạn " + name);
 
       clearForm(setName, setPhone, setOtp);
       navigate("/");
