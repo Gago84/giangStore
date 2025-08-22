@@ -89,7 +89,7 @@ export default function Login() {
 
       alert("✅ Login successful!");
       clearForm(setPhone, setOtp); // reset input fields
-      navigate("/dashboard");
+      navigate("/");
     } catch (error) {
       console.error("❌ OTP verification failed:", error);
       alert("❌ Incorrect OTP. Please try again.");
