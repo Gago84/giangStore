@@ -103,13 +103,22 @@ export default function SignUp() {
         displayName: name,
       });
 
-      // 👉 Lưu Firestore
-      await setDoc(doc(db, "users", user.uid), {
-        uid: user.uid,
-        name: name,
-        phone: user.phoneNumber,
-        createdAt: serverTimestamp(),
-      });
+  // 👉 Lưu Firestore với sẵn các field để dùng sau
+    await setDoc(doc(db, "users", user.uid), {
+      uid: user.uid,
+      name: name,
+      phone: user.phoneNumber,
+      createdAt: serverTimestamp(),
+
+      note: "",
+      map: {
+        address: "",
+        url: "",
+      },
+
+      // 🔽 chuẩn bị trước mảng đơn hàng
+      orders: [],
+    });
 
       alert("✅ Số điện thoại được xác thực, hồ sơ được lưu, chào mừng bạn " + name);
 
