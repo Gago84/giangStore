@@ -116,8 +116,8 @@ export default function SignUp() {
         url: "",
       },
 
-      // 🔽 chuẩn bị trước mảng đơn hàng
       orders: [],
+      points: 0, // ⭐ tổng điểm tích lũy của user
     });
 
       alert("✅ Số điện thoại được xác thực, hồ sơ được lưu, chào mừng bạn " + name);

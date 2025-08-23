@@ -5,6 +5,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { doc, onSnapshot } from "firebase/firestore";
 import "../styles/UserArea.css";
 
+
 function UserArea() {
   const [currentUser, setCurrentUser] = useState(null);
   const [profile, setProfile] = useState(null);
@@ -35,9 +36,13 @@ function UserArea() {
 
   return (
     <div className="user-area">
-      <span className="user-name">
-        {profile?.name || currentUser?.phoneNumber || "Guest"}
-      </span>
+      {currentUser ? (
+        <Link to="/profile" className="user-name">
+          {profile?.name || currentUser?.phoneNumber}
+        </Link>
+      ) : (
+        <span className="user-name">Guest</span>
+      )}
 
       {!currentUser && (
         <>

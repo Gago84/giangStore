@@ -1,0 +1,42 @@
+.profile-page {
+  max-width: 400px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.profile-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-page label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.profile-page input,
+.profile-page textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.profile-page .profile-btn-save {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.profile-page .profile-btn-save:hover {
+  background: #45a049;
+}

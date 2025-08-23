@@ -5,6 +5,7 @@ import Intro from './pages/Intro';
 import Shop from './pages/Shop';
 import SignUp from './pages/SignUp';
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";  // ✅ ở đây mới import
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           <Route path="/" element={<Intro />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/signup" element={<SignUp />} /> 
-          <Route path="/login" element={<Login />} /> 
+          <Route path="/login" element={<Login />} />           
+          <Route path="/profile" element={<Profile />} /> {/* ✅ Profile route */}
         </Routes>
       </main>
       <Footer />
