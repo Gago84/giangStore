@@ -1,12 +1,12 @@
 import ProductList from '../components/ProductList';
 
-function Shop() {
+function Blog() {
   return (
     <section>
-      <h2>Danh sách sản phẩm</h2>
+      <h2>Bài viết</h2>
       <ProductList />
     </section>
   );
 }
 
-export default Shop;
+export default Blog;

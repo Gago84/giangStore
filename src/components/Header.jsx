@@ -9,7 +9,9 @@ function Header() {
       <div>
         <nav>
           <Link to="/">Giới thiệu</Link>
-          <Link to="/shop">Mua hàng</Link>
+          <Link to="/DDHS">Đồ dùng học sinh</Link>
+          <Link to="/VPP">Văn phòng phẩm</Link>
+          <Link to="/Blog">Bài viết</Link>
         </nav>
         <nav>
           <UserArea />
