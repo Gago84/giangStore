@@ -50,16 +50,6 @@ function UserArea() {
           <Link to="/signup" className="user-link">Sign up</Link>
         </>
       )}
-
-      {currentUser && (
-        <a
-          href="#"
-          className="user-link logout"
-          onClick={() => signOut(auth)}
-        >
-          Log out
-        </a>
-      )}
     </div>
   );
 }

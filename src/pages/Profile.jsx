@@ -55,40 +55,61 @@ export default function Profile() {
     }
   };
 
+  // ✅ Handle logout
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();
+      navigate("/login");
+    } catch (error) {
+      console.error("❌ Error logging out:", error);
+      alert("Lỗi khi đăng xuất: " + error.message);
+    }
+  };
+
   if (loading) return <p>Loading...</p>;
   if (!userData) return <p>No user data found.</p>;
 
-    return (
-        <div className="profile-page">
-            <h2>👤 Hồ sơ người dùng</h2>
+  return (
+    <div className="profile-page">
+      <h2>👤 Hồ sơ người dùng</h2>
 
-            <label>Họ tên:</label>
-            <input
-                type="text"
-                value={userData.name}
-                onChange={(e) => setUserData({ ...userData, name: e.target.value })}
-            />
+      <label>Họ tên:</label>
+      <input
+        type="text"
+        value={userData.name}
+        onChange={(e) =>
+          setUserData({ ...userData, name: e.target.value })
+        }
+      />
 
-            <label>Số điện thoại:</label>
-            <input type="text" value={userData.phone} disabled />
+      <label>Số điện thoại:</label>
+      <input type="text" value={userData.phone} disabled />
 
-            <label>Địa chỉ:</label>
-            <input
-                type="text"
-                value={userData.map?.address || ""}
-                onChange={(e) =>
-                    setUserData({
-                    ...userData,
-                    map: { ...userData.map, address: e.target.value },
-                    })
-                }
-            />
+      <label>Địa chỉ:</label>
+      <input
+        type="text"
+        value={userData.map?.address || ""}
+        onChange={(e) =>
+          setUserData({
+            ...userData,
+            map: { ...userData.map, address: e.target.value },
+          })
+        }
+      />
 
-            <p>⭐ Điểm tích lũy: <b>{userData.points || 0}</b></p>
+      <p>
+        ⭐ Điểm tích lũy: <b>{userData.points || 0}</b>
+      </p>
+      
+      <div className="profile-actions">
+        <button onClick={handleSave} className="profile-btn-save">
+          Lưu thay đổi
+        </button>
+        <button onClick={handleLogout} className="profile-btn-logout">
+          Đăng xuất
+        </button>
+      </div>
 
-            <button onClick={handleSave} className="profile-btn-save">
-            Lưu thay đổi
-            </button>
-        </div>
-    );
+    </div>
+  );
 }

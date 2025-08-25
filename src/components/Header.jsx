@@ -11,6 +11,7 @@ function Header() {
           <Link to="/">Giới thiệu</Link>
           <Link to="/DDHS">Đồ dùng học sinh</Link>
           <Link to="/VPP">Văn phòng phẩm</Link>
+          <Link to="/KhuyenMai">Khuyến Mại</Link>
           <Link to="/Blog">Bài viết</Link>
         </nav>
         <nav>

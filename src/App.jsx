@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Intro from './pages/Intro';
 import DDHS from './pages/DDHS';
 import VPP from './pages/VPP';
+import KhuyenMai from './pages/KhuyenMai';
 import Blog from './pages/Blog';
 import SignUp from './pages/SignUp';
 import Login from "./pages/Login";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Intro />} />
           <Route path="/DDHS" element={<DDHS />} />
           <Route path="/VPP" element={<VPP />} />
+          <Route path="/KhuyenMai" element={<KhuyenMai />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/signup" element={<SignUp />} /> 
           <Route path="/login" element={<Login />} />           

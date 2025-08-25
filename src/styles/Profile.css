@@ -40,3 +40,20 @@
 .profile-page .profile-btn-save:hover {
   background: #45a049;
 }
+.profile-page .profile-btn-logout {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  background: #ff7043;   /* cam đỏ dịu hơn */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.profile-page .profile-btn-logout:hover {
+  background: #e64a19;   /* cam đậm hơn khi hover */
+}
+
