@@ -1,0 +1,95 @@
+.blog-post {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.blog-post h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.blogpost-img {
+  float: left;
+  width: 280px;
+  height: auto;
+  margin: 0 20px 20px 0;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.blogpost-content {
+  overflow: hidden; /* để chữ ôm lấy ảnh */
+}
+
+.blog-comments {
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.blog-comments li {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  white-space: pre-line; /* 🔹 giữ xuống dòng */
+}
+
+.blog-comments li b {
+  color: #e53935;
+  font-weight: 600;
+}
+
+.blog-comments small {
+  display: block;
+  margin-top: 4px;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.blog-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* stack textarea và button */
+  gap: 10px;
+}
+
+.blog-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical; /* cho phép resize chiều cao */
+  min-height: 80px;
+  line-height: 1.4;
+}
+
+.blog-form button {
+  align-self: flex-end; /* nút gửi nằm bên phải */
+  padding: 10px 18px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+
+.blog-form button:hover {
+  background-color: #c62828;
+}
+
+.comment-hint {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 4px;
+}

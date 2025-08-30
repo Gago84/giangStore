@@ -53,9 +53,9 @@ function Blog() {
           <p className="blog-excerpt">
             {post.content.replace(/<[^>]+>/g, "").slice(0, 180)}...
           </p>
-          <a href={`/blog/${post.id}`} className="blog-link">
+          <Link className="blog-link" to={`/blog/${post.id}`}>
             Đọc tiếp →
-          </a>
+          </Link>
         </div>
       </li>
     ))}
