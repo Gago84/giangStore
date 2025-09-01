@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Intro from './pages/Intro';
 import DDHS from './pages/DDHS';
 import VPP from './pages/VPP';
-import KhuyenMai from './pages/KhuyenMai';
+import Combo from './pages/Combo';
 import Blog from './pages/Blog';
 import BlogPost from "./pages/BlogPost";
 import SignUp from './pages/SignUp';
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Intro />} />
           <Route path="/DDHS" element={<DDHS />} />
           <Route path="/VPP" element={<VPP />} />
-          <Route path="/KhuyenMai" element={<KhuyenMai />} />
+          <Route path="/combo" element={<Combo />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/signup" element={<SignUp />} /> 

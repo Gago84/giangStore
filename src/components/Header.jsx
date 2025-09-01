@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../styles/header.css';
 import UserArea from './UserArea.jsx';
 
@@ -8,11 +8,11 @@ function Header() {
       <h1>Đồ dùng học sinh - Văn phòng phẩm GHstore</h1>
       <div>
         <nav>
-          <Link to="/">Giới thiệu</Link>
-          <Link to="/DDHS">Đồ dùng học sinh</Link>
-          <Link to="/VPP">Văn phòng phẩm</Link>
-          <Link to="/KhuyenMai">Khuyến Mại</Link>
-          <Link to="/Blog">Bài viết</Link>
+          <NavLink to="/" end>Giới thiệu</NavLink>
+          <NavLink to="/DDHS">Đồ dùng học sinh</NavLink>
+          <NavLink to="/VPP">Văn phòng phẩm</NavLink>
+          <NavLink to="/combo">Bán chạy</NavLink>
+          <NavLink to="/Blog">Bài viết</NavLink>
         </nav>
         <nav>
           <UserArea />

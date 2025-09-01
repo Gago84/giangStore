@@ -1,6 +1,6 @@
 import ProductList from '../components/ProductList';
 
-function KhuyenMai() {
+function Combo() {
   return (
     <section>
       <h2>Danh sách sản phẩm</h2>
@@ -9,4 +9,4 @@ function KhuyenMai() {
   );
 }
 
-export default KhuyenMai;
+export default Combo;
