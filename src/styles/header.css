@@ -65,3 +65,123 @@ header div nav a.active {
   border: 1px solid #ccc;
   border-bottom: 2px solid #fff; /* làm tab nổi lên */
 }
+
+/* Wrapper cho tab có dropdown */
+.tab-with-dropdown {
+  position: relative;
+  display: inline-flex;   /* thay vì inline-block */
+  align-items: center;    /* căn giữa icon với text */
+  margin-right: 0.3rem;   /* giống các nút khác */
+}
+
+/* Style cho link chính có dropdown */
+.tab-with-dropdown > a {
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown ẩn mặc định */
+.tab-with-dropdown .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  min-width: 150px;
+  z-index: 10;
+  flex-direction: column;
+}
+
+/* Hiện dropdown khi hover */
+.tab-with-dropdown:hover .dropdown {
+  display: flex;
+}
+
+/* Style cho item trong dropdown */
+.tab-with-dropdown .dropdown a {
+  color: black;
+  background: #fff;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-with-dropdown .dropdown a:hover {
+  background: #f2f2f2;
+}
+
+/* Mũi tên bên phải */
+.has-dropdown .arrow {
+  font-size: 0.8rem;
+  margin-left: 4px;
+}
+/* ****************************START DROPDOWN LIST******************************** */
+/* Mega dropdown */
+.mega-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  padding: 1rem 2rem;
+  min-width: 400px;
+  z-index: 20;
+
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+
+  /* hiệu ứng ẩn/hiện */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Cột */
+.mega-dropdown .dropdown-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+/* Tiêu đề */
+.mega-dropdown .dropdown-column strong {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Link con */
+.mega-dropdown .dropdown-column a {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: normal;
+  color: #000;
+  text-decoration: none;
+
+  /* hiệu ứng hover */
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Hover link con */
+.mega-dropdown .dropdown-column a:hover {
+  background-color: #f0f0f0;
+  color: #006400; /* xanh đậm hơn một chút */
+}
+/* Khi hover vào tab-with-dropdown thì hiện menu */
+.tab-with-dropdown:hover .mega-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+

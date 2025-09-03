@@ -9,7 +9,29 @@ function Header() {
       <div>
         <nav>
           <NavLink to="/" end>Giới thiệu</NavLink>
-          <NavLink to="/DDHS">Đồ dùng học sinh</NavLink>
+
+<div className="tab-with-dropdown">
+  <NavLink to="/DDHS" className="has-dropdown">
+    Đồ dùng học sinh <span className="arrow">▾</span>
+  </NavLink>
+
+  <div className="mega-dropdown">
+    <div className="dropdown-column">
+      <strong>Bút</strong>
+      <NavLink to="/DDHS/but/1">Bút 1</NavLink>
+      <NavLink to="/DDHS/but/2">Bút 2</NavLink>
+      <NavLink to="/DDHS/but/3">Bút 3</NavLink>
+    </div>
+    <div className="dropdown-column">
+      <strong>Vở</strong>
+      <NavLink to="/DDHS/vo/1">Vở 1</NavLink>
+      <NavLink to="/DDHS/vo/2">Vở 2</NavLink>
+      <NavLink to="/DDHS/vo/3">Vở 3</NavLink>
+    </div>
+  </div>
+</div>
+
+          
           <NavLink to="/VPP">Văn phòng phẩm</NavLink>
           <NavLink to="/combo">Bán chạy</NavLink>
           <NavLink to="/Blog">Bài viết</NavLink>
