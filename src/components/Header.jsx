@@ -5,7 +5,7 @@ import UserArea from './UserArea.jsx';
 function Header() {
   return (
     <header>
-      <h1>Đồ dùng học sinh - Văn phòng phẩm GHstore</h1>
+      <h1>Đồ dùng học sinh - Văn phòng phẩm GHstore111</h1>
       <div>
         <nav>
           <NavLink to="/" end>Giới thiệu</NavLink>
